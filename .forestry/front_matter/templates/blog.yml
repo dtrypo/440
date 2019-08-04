@@ -15,3 +15,5 @@ fields:
     time_format: 
     display_utc: false
   hidden: false
+pages:
+- content/first-blog.md
