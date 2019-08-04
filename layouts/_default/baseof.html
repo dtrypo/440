@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" .}}
+
+<body>
+    {{- if ne .Params.hideui true }}
+    {{ partial "nav.html" . }}
+    {{- end }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{- if ne .Params.hideui true }}
+    {{ partialCached "footer.html" . }}
+    {{- end }}
+</body>
+
+</html>
