@@ -2,11 +2,11 @@
 label: Shop
 hide_body: true
 fields:
-- name: product_name
+- name: product_image
   type: file
   config:
     maxSize: 250
-  label: Product Name
+  label: Product Image
 - name: product_title
   type: text
   config:
