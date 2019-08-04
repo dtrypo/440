@@ -5,3 +5,13 @@ fields:
 - type: text
   name: title
   label: title
+- name: date
+  type: datetime
+  label: Date
+  description: posted date
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  hidden: false
