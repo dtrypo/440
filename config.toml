@@ -1,3 +1,10 @@
 baseURL = "https://440.gr/"
 languageCode = "en-us"
 title = "440 Sound Collective"
+
+[outputs]
+    home = ["HTML"]
+    page = ["HTML"]
+    section = ["HTML"]
+    taxonomyTerm = ["HTML"]
+    taxonomy = ["HTML"]
