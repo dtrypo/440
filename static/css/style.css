@@ -15,6 +15,7 @@ body {
     font-size: 1.5rem;
     color: #fefefe;
     background-color: #424242;
+    position: relative;
 }
 
 ul, ol, li {
@@ -56,9 +57,10 @@ h6 {
     font-size: 1.3rem;
 }
 
-.serif{
+.serif {
     font-family: 'Times New Roman', Times, serif;
 }
+
 /* grid system */
 
 .wrapper {
@@ -89,12 +91,16 @@ h6 {
     flex-direction: column;
 }
 
-.flex-wrap{
+.flex-wrap {
     flex-wrap: wrap;
 }
 
 .flex1 {
     flex: 1;
+}
+
+.flex-just-bet{
+    justify-content: space-between;
 }
 
 /* buttons */
@@ -106,7 +112,7 @@ h6 {
 .btn {
     padding: 2rem 3rem;
     background: rgb(110, 40, 141);
-    background: linear-gradient(0deg, rgba(110,40,141,1) 25%, rgba(152,37,170,1) 55%, rgba(214,32,213,1) 100%);
+    background: linear-gradient(0deg, rgba(110, 40, 141, 1) 25%, rgba(152, 37, 170, 1) 55%, rgba(214, 32, 213, 1) 100%);
     border: 1px solid rgb(110, 40, 141);
     border-radius: .5rem;
     font-size: 1.8rem;
@@ -115,7 +121,7 @@ h6 {
     white-space: nowrap;
 }
 
-.btn--nude{
+.btn--nude {
     padding: 2rem 3rem;
     background-color: transparent;
     border: 1px solid #fefefe;
@@ -126,14 +132,23 @@ h6 {
     white-space: nowrap;
 }
 
-.btn:hover, .btn--nude:hover{
+.btn:hover, .btn--nude:hover {
     background: #fefefe;
     color: #424242;
 }
+
 /* nav menu */
 
 nav {
     height: 10rem;
+}
+
+nav .wrapper{
+    justify-content: space-between;
+}
+
+nav img{
+    width: 100%;
 }
 
 nav ul {
@@ -156,28 +171,64 @@ nav a:hover {
     border-top-color: #d920d8;
 }
 
-.menu-container-mobile{
+.menu-container-mobile {
     display: none;
-    position: absolute;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 10% 0;
 }
 
-@media screen and (max-width: 800px){
-    .menu-container-desktop{
-        display: none;
+.menu-container {
+    display: none;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 3.5rem;
+    height: .2rem;
+    background-color: #fefefe;
+    margin: 1rem 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 8px);
+    transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (max-width: 800px) {
+    .menu-container{
+        display: inline-block;
     }
 
+    .menu-container-desktop {
+        display: none;
+    }
     nav ul {
         height: 100vh;
         width: 100vw;
         background: #424242;
     }
-    
     nav li {
-        height: auto;
+        height: 5rem;;
+        margin: 2rem 0;
     }
-    
     nav a {
-        height: auto;
+        height: 5rem;;
+        margin-left: 0;
     }
 }
 
@@ -206,11 +257,10 @@ nav a:hover {
     margin: 2rem;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .hero h1 {
-        font-size: 10vw;
+        font-size: 9vw;
     }
-    
     .hero p {
         font-size: 4vw;
     }
