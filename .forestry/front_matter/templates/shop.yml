@@ -34,3 +34,5 @@ fields:
 - name: availability
   type: boolean
   label: Availability
+pages:
+- content/shop/test.md
