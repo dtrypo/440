@@ -1,4 +1,36 @@
 ---
 label: Shop
 hide_body: true
-fields: []
+fields:
+- name: product_name
+  type: file
+  config:
+    maxSize: 250
+  label: Product Name
+- name: product_title
+  type: text
+  config:
+    required: false
+  label: Product Title
+- name: product_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Product Description
+- name: price
+  type: number
+  label: Price
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: availability
+  type: boolean
+  label: Availability
