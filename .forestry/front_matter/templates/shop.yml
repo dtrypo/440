@@ -35,4 +35,5 @@ fields:
   type: boolean
   label: Availability
 pages:
+- content/shop/test2.md
 - content/shop/test.md
