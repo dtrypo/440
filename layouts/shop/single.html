@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="shop">
+    <div class="wrapper">
+        <h1>{{- .Params.Product_title }}</h1>
+        <div class="shop-box--img">
+            <img src="{{- .Params.Product_image }}" alt="{{- .Params.Product_title }}">
+        </div>
+    </div>
+</div>
+{{- end }}

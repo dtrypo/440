@@ -265,3 +265,17 @@ nav a:hover {
         font-size: 4vw;
     }
 }
+
+/* shop */
+
+.shop h1{
+    margin: 2rem 0;
+}
+
+.shop .shop-box--img{
+    max-width: 60rem;
+}
+
+.shop img{
+    width: 100%;
+}
